@@ -2,6 +2,7 @@ package com.example.yuki.android_kotlin01
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,21 +22,21 @@ class MainActivity : AppCompatActivity() {
     private fun outputLog() {
 
         val char = 'A'
-        println(char)
+        Log.d("outputLog", "$char")
 
         for (char in "Kotlin") {
-            println(char)
+            Log.d("outputLog", "$char")
         }
 
         val string1 = "Hello, Kotlin"
-        println(string1)
+        Log.d("outputLog", "$string1")
 
         val string2 = """
             初めての
             　Kotlin
             　　プロジェクト。
             """
-        println(string2)
+        Log.d("outputLog", "$string2")
 
         val string3 = """
             |
@@ -43,10 +44,10 @@ class MainActivity : AppCompatActivity() {
             |Kotlin
             |プロジェクト。
             """.trimMargin()
-        println(string3)
+        Log.d("outputLog", "$string3")
 
         val string4 = "text"
-        println("string4: $string4 length: ${string4.length}")
+        Log.d("outputLog", "string4: $string4 length: ${string4.length}")
     }
 
     /**
@@ -56,23 +57,24 @@ class MainActivity : AppCompatActivity() {
 
         // Double
         val doubleValue = 1234
-        println("doubleValue: ${doubleValue}")
+        Log.d("outputLogUsingNumerics", "doubleValue: ${doubleValue}")
 
         // Double(浮動小数点数)
         val doubleValue2 = 123.4
-        println("doubleValue2: $doubleValue2")
+        Log.d("outputLogUsingNumerics", "doubleValue2: $doubleValue2")
+
 
         // Long
         val longValue = 1234L
-        println("longValue: $longValue")
+        Log.d("outputLogUsingNumerics", "longValue: $longValue")
 
         // Float
         val floatValue = 123.4f
-        println("floatValue: $floatValue")
+        Log.d("outputLogUsingNumerics", "floatValue: $floatValue")
 
         // Int
         val intValue: Int = 10
-        println("intValue: $intValue")
+        Log.d("outputLogUsingNumerics", "intValue: $intValue")
     }
 
     /**
@@ -83,17 +85,17 @@ class MainActivity : AppCompatActivity() {
         var isVisible = true
 
         if (isVisible) {
-            println("isVisible: true")
+            Log.d("outputLogUsingBoolean", "isVisible: true")
         }
 
         isVisible = false
 
         if (!isVisible) {
-            println("isVisible: false")
+            Log.d("outputLogUsingBoolean", "isVisible: false")
         }
 
         // 条件式に応じてresultTextに代入する値を決定する
         val resultText = if (isVisible) "isVisible: true" else "isVisible: false"
-        println(resultText)
+        Log.d("outputLogUsingBoolean", "$resultText")
     }
 }
